@@ -15,7 +15,10 @@
 ;;; Code:
 
 (require 'ht)
-(require 'marginalia)
+
+;; Declare marginalia variable to avoid compile warnings
+;; The actual require happens when user loads marginalia
+(defvar marginalia-annotator-registry)
 
 (defun spot--annotate-album (album)
   "Annotate ALBUM with metadata."
