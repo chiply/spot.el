@@ -16,11 +16,10 @@
 
 (require 'ht)
 
-(fset 'alist-get-chain 'alist-get)
-(defun alist-get-chain (symbols alist)
+(defun spot--alist-get-chain (symbols alist)
   "Look up the value for the chain of SYMBOLS in ALIST."
   (if symbols
-      (alist-get-chain (cdr symbols)
+      (spot--alist-get-chain (cdr symbols)
                        (assoc (car symbols) alist))
     (cdr alist)))
 

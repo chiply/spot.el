@@ -1,4 +1,4 @@
-;;; spot.el --- Spotify client for Emacs -*- lexical-binding: t; -*-
+;;; spot.el --- Spotify client -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2025 Charlie Holland
 

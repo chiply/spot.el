@@ -1,6 +1,8 @@
+; -*- lexical-binding: t -*-
+
 (package "spot"
          "0.1.0"
-         "Spotify client for Emacs")
+         "Spotify client")
 
 (website-url "https://github.com/chiply/spot.el")
 (keywords "multimedia" "spotify")

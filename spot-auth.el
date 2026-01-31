@@ -39,8 +39,8 @@ After authorizing, copy the code from the redirect URL."
      :callback (lambda (response)
                  (let ((json (json-read-from-string response)))
                    (setq
-                    spot-access-token (alist-get-chain '(access_token) json)
-                    spot-refresh-token (alist-get-chain '(refresh_token) json)))
+                    spot-access-token (spot--alist-get-chain '(access_token) json)
+                    spot-refresh-token (spot--alist-get-chain '(refresh_token) json)))
                  (message "Refreshed spot access token and refresh token"))
      :extra-headers `(("Content-Type" . "application/x-www-form-urlencoded")
                       ("Content-Length" . "0")
@@ -59,7 +59,7 @@ After authorizing, copy the code from the redirect URL."
    :callback (lambda (response)
                (setq
                 spot-access-token
-                (alist-get-chain '(access_token) (json-read-from-string response)))
+                (spot--alist-get-chain '(access_token) (json-read-from-string response)))
                (message "Refreshed spot access token"))
    :extra-headers `(("Content-Type" . "application/x-www-form-urlencoded")
                     ("Content-Length" . "0")
