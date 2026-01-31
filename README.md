@@ -28,14 +28,33 @@ A Spotify client for Emacs that integrates with the modern completion ecosystem.
 
 ### Prerequisites: Spotify API Credentials
 
-1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
-2. Log in with your Spotify account
-3. Click "Create app"
-4. Fill in the app details:
-   - App name: "Emacs Spot Client" (or any name you prefer)
-   - Redirect URI: `https://spotify.com`
-   - Select "Web API" under APIs used
-5. After creating, go to Settings and note your Client ID and Client Secret
+You need to create a Spotify application to get API credentials. This is free and only takes a few minutes.
+
+#### Step 1: Create a Spotify Developer Account
+
+1. Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+2. Log in with your existing Spotify account (free or premium both work)
+3. If prompted, accept the Developer Terms of Service
+
+#### Step 2: Create an Application
+
+1. Click the **"Create app"** button
+2. Fill in the required fields:
+   - **App name**: `Emacs Spot Client` (or any name you like)
+   - **App description**: `Spotify client for Emacs` (or any description)
+   - **Redirect URI**: Enter exactly `https://spotify.com` and click **Add**
+   - **Which API/SDKs are you planning to use?**: Check **Web API**
+3. Check the box to agree to Spotify's Developer Terms of Service
+4. Click **Save**
+
+#### Step 3: Get Your Client ID and Client Secret
+
+1. After creating the app, you'll be taken to the app's dashboard
+2. Your **Client ID** is displayed on this page - copy it
+3. Click **"View client secret"** to reveal your **Client Secret** - copy it
+4. Keep these credentials secure and never commit them to version control
+
+> **Note**: The Client ID is a 32-character hexadecimal string (e.g., `7b036492368d47c492d048aa8aec339b`). The Client Secret is similar but should be kept private.
 
 ### Set Environment Variables
 
