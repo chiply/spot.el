@@ -113,14 +113,15 @@
       ,(string-replace "\n" " " (ht-get* (get-text-property 0 'multi-data audiobook) 'description)))
     " || ")))
 
-;; Register annotators
-(add-to-list 'marginalia-annotator-registry '(album spot--annotate-album))
-(add-to-list 'marginalia-annotator-registry '(artist spot--annotate-artist))
-(add-to-list 'marginalia-annotator-registry '(playlist spot--annotate-playlist))
-(add-to-list 'marginalia-annotator-registry '(track spot--annotate-track))
-(add-to-list 'marginalia-annotator-registry '(show spot--annotate-show))
-(add-to-list 'marginalia-annotator-registry '(episode spot--annotate-episode))
-(add-to-list 'marginalia-annotator-registry '(audiobook spot--annotate-audiobook))
+;; Register annotators after marginalia is loaded
+(with-eval-after-load 'marginalia
+  (add-to-list 'marginalia-annotator-registry '(album spot--annotate-album))
+  (add-to-list 'marginalia-annotator-registry '(artist spot--annotate-artist))
+  (add-to-list 'marginalia-annotator-registry '(playlist spot--annotate-playlist))
+  (add-to-list 'marginalia-annotator-registry '(track spot--annotate-track))
+  (add-to-list 'marginalia-annotator-registry '(show spot--annotate-show))
+  (add-to-list 'marginalia-annotator-registry '(episode spot--annotate-episode))
+  (add-to-list 'marginalia-annotator-registry '(audiobook spot--annotate-audiobook)))
 
 (provide 'spot-marginalia)
 

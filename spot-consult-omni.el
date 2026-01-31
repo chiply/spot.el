@@ -6,7 +6,7 @@
 ;; Maintainer: Charlie Holland <mister.chiply@gmail.com>
 ;; URL: https://github.com/chiply/spot.el
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "28.1") (consult-omni "0.1"))
+;; Package-Requires: ((emacs "29.1") (consult-omni "0.1"))
 ;; Keywords: multimedia, spotify
 
 ;;; Commentary:

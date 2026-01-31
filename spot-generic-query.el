@@ -19,6 +19,9 @@
 
 (require 'spot-var)
 
+;; Defined in url-http, available when url-retrieve returns
+(defvar url-http-end-of-headers)
+
 (defun spot-retrieve-url-to-alist-synchronously (url)
   "Return alist representation of JSON response from URL."
   (with-current-buffer (url-retrieve-synchronously url nil nil spot--request-timeout)

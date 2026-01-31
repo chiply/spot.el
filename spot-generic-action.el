@@ -21,6 +21,9 @@
 (require 'spot-generic-query)
 (require 'spot-util)
 
+;; Forward declaration for function defined in spot-embark.el
+(declare-function spot-action--add-track-to-playlist "spot-embark" (item))
+
 ;;;###autoload
 (defun spot-add-current-track-to-playlist ()
   "Add the currently playing track to a playlist."
