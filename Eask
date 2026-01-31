@@ -7,7 +7,18 @@
 
 (package-file "spot.el")
 
-(files "*.el" (:exclude "spot-consult-omni.el"))
+;; List files explicitly to exclude optional spot-consult-omni.el
+(files "spot.el"
+       "spot-auth.el"
+       "spot-consult.el"
+       "spot-embark.el"
+       "spot-generic-action.el"
+       "spot-generic-query.el"
+       "spot-marginalia.el"
+       "spot-mode-line.el"
+       "spot-search.el"
+       "spot-util.el"
+       "spot-var.el")
 
 (script "test" "echo \"No tests yet\"")
 
