@@ -12,7 +12,7 @@ A Spotify client for Emacs that integrates with the modern completion ecosystem.
 
 ## Requirements
 
-- Emacs 28.1+
+- Emacs 29.1+
 - [ht](https://github.com/Wilfred/ht.el) - Hash table library
 - [dash](https://github.com/magnars/dash.el) - List manipulation
 - [consult](https://github.com/minad/consult) - Completion framework

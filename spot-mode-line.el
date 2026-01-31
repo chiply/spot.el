@@ -99,7 +99,6 @@ Default is the official Spotify green."
            'spot--update-modeline-lighters)
           spot--update-timers)))
 
-;;;###autoload
 (defun spot--start-update-timer ()
   "Start the mode line update timer."
   (when (not spot--timer-started)
